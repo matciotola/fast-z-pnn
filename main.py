@@ -85,8 +85,8 @@ def main_zpnn(args):
     mtf_kernel, r, c = generate_mtf_variables(s.ratio, sensor, I_PAN, I_MS)
 
     if not coregistration_flag:
-        r = 2
-        c = 2
+        r = [2]*s.nbands
+        c = [2]*s.nbands
 
     # Input preparation
     I_in = input_preparation(I_MS, I_PAN, s.ratio, s.nbits, s.net_scope)
@@ -275,7 +275,7 @@ def main_zpnn(args):
 
     torch.cuda.empty_cache()
     gc.collect()
-    if args.save_weights:
+    if save_weights_flag:
         torch.save(net.state_dict(), os.path.join(out_dir, s.sensor + '_' + method + '_' + test_path.split(os.sep)[-1].split('.')[0] + '_model.tar'))
 
 
