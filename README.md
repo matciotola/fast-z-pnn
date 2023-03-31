@@ -1,21 +1,12 @@
 # Pansharpening by convolutional neural networks in the full resolution framework
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2111.08334)
-[![GitHub Stars](https://img.shields.io/github/stars/matciotola/Z-PNN?style=social)](https://github.com/matciotola/Z-PNN)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=matciotola/Z-PNN)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2c50e61e07554cd1a63a0e97d61a54a3)](https://www.codacy.com/gh/matciotola/Z-PNN/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=matciotola/Z-PNN&amp;utm_campaign=Badge_Grade)
-[![codecov](https://codecov.io/gh/matciotola/Z-PNN/branch/master/graph/badge.svg?token=PN37XP3H3Z)](https://codecov.io/gh/matciotola/Z-PNN)
-[![build](https://github.com/matciotola/Z-PNN/actions/workflows/python-package-z-pnn.yml/badge.svg)](https://github.com/matciotola/Z-PNN/actions/workflows/python-package-z-pnn.yml)
-
-
-[Pansharpening by convolutional neural networks in the full resolution framework](https://ieeexplore.ieee.org/document/9745494) ([ArXiv](https://arxiv.org/abs/2111.08334)) is 
+**Main Paper**: [Pansharpening by convolutional neural networks in the full resolution framework](https://ieeexplore.ieee.org/document/9745494) ([ArXiv](https://arxiv.org/abs/2111.08334)) is 
 a deep learning method for Pansharpening based on unsupervised and full-resolution framework training.
 
-## Cite Z-PNN
+## Cite Us
 
-If you use Fast Z-PNN in your research, please use the following BibTeX entries.
-
+- Z-PNN
 ```
 @article{Ciotola2022,  
          author={Ciotola, Matteo and Vitale, Sergio and Mazza, Antonio and Poggi, Giovanni and Scarpa, Giuseppe},  
@@ -28,24 +19,54 @@ If you use Fast Z-PNN in your research, please use the following BibTeX entries.
          doi={10.1109/TGRS.2022.3163887}
 }
 
+```
+
+- Fast Z-PNN
+```
+@article{Ciotola2023,
+         author = {Ciotola, Matteo and Scarpa, Giuseppe},
+         title = {Fast Full-Resolution Target-Adaptive CNN-Based Pansharpening Framework},
+         journal = {Remote Sensing},
+         volume = {15},
+         year = {2023},
+         number = {2},
+         article-number = {319},
+         url = {https://www.mdpi.com/2072-4292/15/2/319},
+         issn = {2072-4292},
+         doi = {10.3390/rs15020319}
+}
 
 ```
 
-## Team members
+- Metrics
+```
+@article{Scarpa2022,
+         author = {Scarpa, Giuseppe and Ciotola, Matteo},
+         title = {Full-Resolution Quality Assessment for Pansharpening},
+         journal = {Remote Sensing},
+         volume = {14},
+         year = {2022},
+         number = {8},
+         article-number = {1808},
+         url = {https://www.mdpi.com/2072-4292/14/8/1808},
+         issn = {2072-4292},
+         doi = {10.3390/rs14081808}
+}
+
+```
+
+## Authors
  - Matteo Ciotola (matteo.ciotola@unina.it);
- - Sergio Vitale  (sergio.vitale@uniparthenope.it);
- - Antonio Mazza (antonio.mazza@unina.it);
- - Giovanni Poggi   (poggi@unina.it);
  - Giuseppe Scarpa  (giscarpa@unina.it).
  
  
 ## License
-Copyright (c) 2021 Image Processing Research Group of University Federico II of Naples ('GRIP-UNINA').
+Copyright (c) 2023 Image Processing Research Group of University Federico II of Naples ('GRIP-UNINA').
 All rights reserved.
 This software should be used, reproduced and modified only for informational and nonprofit purposes.
 
 By downloading and/or using any of these files, you implicitly agree to all the
-terms of the license, as specified in the document [`LICENSE`](https://github.com/matciotola/Z-PNN/LICENSE.txt)
+terms of the license, as specified in the document [`LICENSE`](https://github.com/matciotola/fast-z-pnn/LICENSE.txt)
 (included in this package) 
 
 ## Prerequisites
@@ -64,7 +85,7 @@ the operation is not guaranteed with other configurations.
 - Download the algorithm and unzip it into the folder or, alternatively, from CLI:
 
 ```
-git clone https://github.com/matciotola/Z-PNN
+git clone https://github.com/matciotola/fast-z-pnn
 ```
 
 - Create the virtual environment with the `z_pnn_environment.yml`
@@ -82,7 +103,7 @@ conda activate z_pnn_env
 - Test it 
 
 ```
-python main.py -i example/WV3_example.mat -o ./Output_Example -s WV3 -m Z-PNN --coregistration --show_results 
+python main.py -i example/WV3_example.mat -o ./Output_Example -s WV3 -m Fast-Z-PNN --coregistration --show_results 
 ```
 
 
