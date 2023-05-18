@@ -131,7 +131,14 @@ def main_zpnn(args):
         exp_y = np.clip(exp_y, min_half_width, center[1])
 
     # Loading of pre-trained weights
-    weight_path = 'weights/' + s.sensor + '_' + method + '_model.tar'
+    if method.endswith('Z-PNN'):
+        method_short = 'Z-PNN'
+    elif method.endswith('Z-PanNet'):
+        method_short = 'Z-PanNet'
+    else:
+        method_shprt = 'Z-DRPNN'
+
+    weight_path = 'weights/' + s.sensor + '_' + method_short + '_model.tar'
     print(weight_path)
     if os.path.exists(weight_path) and not from_scratch_flag:
         net.load_state_dict(torch.load(weight_path))
