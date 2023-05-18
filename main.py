@@ -256,7 +256,7 @@ def main_zpnn(args):
     out = np.clip(out, 0, out.max())
 
     out = out.astype(np.uint16)
-    save_path = os.path.join(out_dir, test_path.split(os.sep)[-1].split('.')[0] + '_' + method + '_' + str(total_epochs) + '.mat')
+    save_path = os.path.join(out_dir, test_path.split(os.sep)[-1].split('.')[0] + '_' + method + '.mat')
     io.savemat(save_path, {'I_MS': out})
 
     if save_losses_trend_flag:
